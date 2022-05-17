@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/css/main.css}" type="text/css"/>
+    <title>See products</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+<div th:replace="fragments/general :: top"/>
+<div th:each="cartProduct : ${cart.getProducts()}">
+    <span th:text="${cartProduct.name}">name</span>
+    <span th:text="${cartProduct.price}">name</span>
+    <button type="button">Increase quantity</button>
+    <span th:text="1">name</span>
+</div>
+<div>
+    <a href="">Check out</a>
+</div>
+</body>
+</html>
